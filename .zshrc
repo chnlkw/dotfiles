@@ -47,3 +47,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin"
+
+export PATH=$PATH:"/opt/intel/bin"
+export PATH=$PATH:"/opt/texlive/2013/bin/x86_64-linux"
+
+export SU2_RUN="/home/chnlkw/bin"
+export SU2_HOME="/home/chnlkw/bin"
+export PATH=$PATH:$SU2_RUN
+
+
