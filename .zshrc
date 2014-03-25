@@ -56,3 +56,4 @@ export SU2_HOME="/home/chnlkw/bin"
 export PATH=$PATH:$SU2_RUN
 
 
+source /opt/intel/bin/compilervars.sh intel64
