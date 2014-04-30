@@ -2,13 +2,13 @@ set ai
 set tabstop=4
 set shiftwidth=4
 set mouse=a
+set nu
 
 colorscheme default
 set background=dark
 
 nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
-map <F9> :WMToggle<CR>
-":Tagbar<CR>
+map <F9> :WMToggle<CR>:Tagbar<CR>
 
 set nocompatible               " be iMproved
 filetype off                   " required!
