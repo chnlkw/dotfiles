@@ -4,11 +4,33 @@ set shiftwidth=4
 set mouse=a
 set nu
 
+" REQUIRED. This makes vim invoke latex-suite when you open a tex file. 
+filetype plugin on 
+"
+" " IMPORTANT: win32 users will need to have 'shellslash' set so that latex 
+" " can be called correctly. 
+set shellslash 
+"
+" " IMPORTANT: grep will sometimes skip displaying the file name if you 
+" " search in a singe file. This will confuse latex-suite. Set your grep 
+" " program to alway generate a file-name. 
+set grepprg=grep\ -nH\ $* 
+"
+" " OPTIONAL: This enables automatic indentation as you type. 
+filetype indent on
+"
 colorscheme default
 set background=dark
 
-nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
+nnoremap <F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q --sort=foldcase  .<CR>:set tags=./tags;$HOME<CR>:!cscope -Rbq <CR>:cscope reset<CR><CR>
+
 map <F9> :WMToggle<CR>:Tagbar<CR>
+
+" For local replace
+nnoremap gr gd[{V%::s/<C-R>///gc<left><left><left>
+
+" For global replace
+nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
 set nocompatible               " be iMproved
 filetype off                   " required!
@@ -35,6 +57,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'majutsushi/tagbar'
 Bundle 'lekv/vim-clewn'
 Bundle 'justinmk/vim-syntax-extra'
+Bundle 'Rip-Rip/clang_complete'
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
@@ -43,7 +66,7 @@ Bundle 'The-NERD-tree'
 Bundle 'winmanager'
 Bundle 'bufexplorer.zip'
 Bundle 'taglist.vim'
-Bundle 'clang-complete'
+"Bundle 'clang-complete'
 "Bundle 'OmniCppComplete'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
@@ -95,4 +118,5 @@ let g:clang_hl_errors=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_user_options='-std=c++11 -I/usr/include'
+let g:clang_user_options='-std=c++14 -I/usr/include/c++/4.8'
+let g:clang_library_path='/usr/lib/llvm-3.5/lib'
