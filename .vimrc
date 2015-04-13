@@ -66,10 +66,11 @@ Bundle 'The-NERD-tree'
 Bundle 'winmanager'
 Bundle 'bufexplorer.zip'
 Bundle 'taglist.vim'
+Bundle 'faith/vim-go'
 "Bundle 'clang-complete'
 "Bundle 'OmniCppComplete'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
+"Plugin 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (ie. when working on your own plugin)
 "Bundle 'file:///Users/gmarik/path/to/plugin'
 " ...
