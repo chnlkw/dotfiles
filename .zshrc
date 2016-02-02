@@ -47,6 +47,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=$PATH:"/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/bin:/sbin"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:"/usr/local/lib"
 
 export PATH=$PATH:"/opt/intel/bin"
 export PATH=$PATH:"/opt/texlive/2013/bin/x86_64-linux"
@@ -55,5 +56,16 @@ export SU2_RUN="/home/chnlkw/bin"
 export SU2_HOME="/home/chnlkw/bin"
 export PATH=$PATH:$SU2_RUN
 
+export HADOOP_HOME=/usr/local/hadoop
+export JAVA_HOME=/usr/lib/jvm/default-java
+export HADOOP_INSTALL=/usr/local/hadoop
+export PATH=$PATH:$HADOOP_INSTALL/bin
+export PATH=$PATH:$HADOOP_INSTALL/sbin
+export HADOOP_MAPRED_HOME=$HADOOP_INSTALL
+export HADOOP_COMMON_HOME=$HADOOP_INSTALL
+export HADOOP_HDFS_HOME=$HADOOP_INSTALL
+export YARN_HOME=$HADOOP_INSTALL
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_INSTALL/lib/native
+export HADOOP_OPTS="-Djava.library.path=$HADOOP_INSTALL/lib"
 
 source /opt/intel/bin/compilervars.sh intel64
