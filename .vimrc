@@ -67,7 +67,7 @@ Bundle 'winmanager'
 Bundle 'bufexplorer.zip'
 Bundle 'taglist.vim'
 Bundle 'faith/vim-go'
-"Bundle 'clang-complete'
+Bundle 'clang-complete'
 "Bundle 'OmniCppComplete'
 " non github repos
 "Plugin 'git://git.wincent.com/command-t.git'
@@ -119,5 +119,5 @@ let g:clang_hl_errors=1
 let g:clang_snippets=1
 let g:clang_close_preview=1
 let g:clang_use_library=1
-let g:clang_user_options='-std=c++14 -I/usr/include/c++/4.8'
-let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+let g:clang_user_options='-std=c++14 -I/usr/include/c++/5'
+let g:clang_library_path='/opt/clang-4/lib'
